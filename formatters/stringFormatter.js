@@ -10,4 +10,9 @@ function capitalise(data) {
     .replace(/(^\w{1})|(\s{1}\w{1})/g, (match) => match.toUpperCase());
 }
 
-module.exports = { addSpacesToCamelCase, capitalise };
+function capitaliseFirstLetter(string) {
+  if (!string) return false;
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+module.exports = { addSpacesToCamelCase, capitalise, capitaliseFirstLetter };
