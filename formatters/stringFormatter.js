@@ -15,4 +15,9 @@ function capitaliseFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-module.exports = { addSpacesToCamelCase, capitalise, capitaliseFirstLetter };
+function toKebabCase(string) {
+    if (!string) return false
+    return string.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase();
+}
+
+module.exports = { addSpacesToCamelCase, capitalise, capitaliseFirstLetter, toKebabCase };
