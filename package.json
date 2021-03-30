@@ -4,7 +4,7 @@
   "description": "Utility functions and unit tests",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
