@@ -1,17 +1,9 @@
 const {
-  addSpacesToCamelCase,
   capitalise,
   capitaliseFirstLetter,
+  addSpacesToCamelCase,
   toKebabCase,
 } = require("./stringFormatter");
-
-test("Adds spaces to a camelCased string", () => {
-  expect(addSpacesToCamelCase("")).toBe(false);
-  expect(addSpacesToCamelCase("helloWorld")).toBe("hello World");
-  expect(addSpacesToCamelCase("helloWorldAndGoodbye")).toBe(
-    "hello World And Goodbye"
-  );
-});
 
 test("Capitalises the first letter of each word", () => {
   expect(capitalise("")).toBe(false);
@@ -24,6 +16,14 @@ test("Capitalises the first letter in a sentence", () => {
   expect(capitaliseFirstLetter("")).toBe(false);
   expect(capitaliseFirstLetter("hello")).toBe("Hello");
   expect(capitaliseFirstLetter("hello world")).toBe("Hello world");
+});
+
+test("Adds spaces to a camelCased string", () => {
+  expect(addSpacesToCamelCase("")).toBe(false);
+  expect(addSpacesToCamelCase("helloWorld")).toBe("hello World");
+  expect(addSpacesToCamelCase("helloWorldAndGoodbye")).toBe(
+    "hello World And Goodbye"
+  );
 });
 
 test("Converts a string to kebab-case", () => {

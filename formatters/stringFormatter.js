@@ -1,8 +1,3 @@
-function addSpacesToCamelCase(string) {
-  if (!string) return false;
-  return string.replace(/([A-Z](?=[a-z]+)|[A-Z]+(?![a-z]))/g, " $1");
-}
-
 function capitalise(data) {
   if (!data) return false;
   return data
@@ -15,6 +10,11 @@ function capitaliseFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+function addSpacesToCamelCase(string) {
+  if (!string) return false;
+  return string.replace(/([A-Z](?=[a-z]+)|[A-Z]+(?![a-z]))/g, " $1");
+}
+
 function toKebabCase(string) {
   if (!string) return false;
   return string
@@ -24,8 +24,8 @@ function toKebabCase(string) {
 }
 
 module.exports = {
-  addSpacesToCamelCase,
   capitalise,
   capitaliseFirstLetter,
+  addSpacesToCamelCase,
   toKebabCase,
 };
