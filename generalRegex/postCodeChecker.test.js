@@ -1,6 +1,6 @@
 const postCodeChecker = require('./postCodeChecker')
 
-test('checks that the value passed to the postcode field contains letters and numbers and is of the right length', () => {
+test('Checks that the value passed to the postcode field contains letters and numbers and is of the right length', () => {
     expect(postCodeChecker('')).toBe(false)
     expect(postCodeChecker('"@£$%^& ')).toBe(false)
     expect(postCodeChecker('m12')).toBe(false)
@@ -12,19 +12,19 @@ test('checks that the value passed to the postcode field contains letters and nu
     expect(postCodeChecker('MM1F 3FD')).toBe(true)
 })
 
-test("checks that the value passed to the postcode field doesn't contain Q, V & X in the first position", () => {
+test("Checks that the value passed to the postcode field doesn't contain Q, V & X in the first position", () => {
     expect(postCodeChecker('Q12 3FD')).toBe(false)
     expect(postCodeChecker('V12 3FD')).toBe(false)
     expect(postCodeChecker('X12 3FD')).toBe(false)
 })
 
-test("checks that the value passed to the postcode field doesn't contain I, J and Z in the second position", () => {
+test("Checks that the value passed to the postcode field doesn't contain I, J and Z in the second position", () => {
     expect(postCodeChecker('MI2 3FD')).toBe(false)
     expect(postCodeChecker('MJ2 3FD')).toBe(false)
     expect(postCodeChecker('MZ2 3FD')).toBe(false)
 })
 
-test('checks that the value passed to the postcode field contains A, B, C, D, E, F, G, H, J, K, S, T, U and W or 0 - 9 in the third position', () => {
+test('Checks that the value passed to the postcode field contains A, B, C, D, E, F, G, H, J, K, S, T, U and W or 0 - 9 in the third position', () => {
     expect(postCodeChecker('M12 3FD')).toBe(true)
     expect(postCodeChecker('M19 3FD')).toBe(true)
     expect(postCodeChecker('M1A 3FD')).toBe(true)
@@ -43,7 +43,7 @@ test('checks that the value passed to the postcode field contains A, B, C, D, E,
     expect(postCodeChecker('M1W 3FD')).toBe(true)
 })
 
-test("checks that the final three letters passed to the postcode field don't contain these letters: A, B, C, D, E, F, G, H, J, K, S, T, U and W", () => {
+test("Checks that the final three letters passed to the postcode field don't contain these letters: A, B, C, D, E, F, G, H, J, K, S, T, U and W", () => {
     expect(postCodeChecker('M12 CFD')).toBe(false)
     expect(postCodeChecker('M12 IFD')).toBe(false)
     expect(postCodeChecker('M12 KFD')).toBe(false)
@@ -64,7 +64,7 @@ test("checks that the final three letters passed to the postcode field don't con
     expect(postCodeChecker('M12 3FV')).toBe(false)
 })
 
-test('checks that the postcode passed in is valid - the correct amount of combined numbers and letters', () => {
+test('Checks that the postcode passed in is valid - the correct amount of combined numbers and letters', () => {
     expect(postCodeChecker('AA9A 9AA')).toBe(true)
     expect(postCodeChecker('A9A 9AA')).toBe(true)
     expect(postCodeChecker('A9 9AA')).toBe(true)

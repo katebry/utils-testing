@@ -1,6 +1,6 @@
 const emailChecker = require("./emailChecker");
 
-test("checks that the value passed to the email address field is valid", () => {
+test("Checks that the value passed to the email address field is valid", () => {
   expect(emailChecker("")).toBe(false);
   expect(emailChecker(undefined)).toBe(false);
   expect(emailChecker("kat]e@.com")).toBe(false);
