@@ -16,5 +16,6 @@ test("When a sort code is required, this is formatted with the `-` sign", () => 
 });
 
 test("When a credit card is displayed, the first 12 characters are masked with asterisks", () => {
+  expect(maskCreditCard("")).toBe(false);
   expect(maskCreditCard("1122334455667788")).toBe("**** **** **** 7788");
 });
