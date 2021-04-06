@@ -18,5 +18,6 @@ test('If a string containing numeric characters is passed in, the integers are r
     expect(numericExtractor('4____"%6')).toBe('64,46')
     expect(numericExtractor('12RF "?>3 __ @')).toBe('321,312,231,213,132,123')
     expect(numericExtractor('1234LDVEWPVKWV      "|"+')).toBe('4321,4312,4231,4213,4132,4123,3421,3412,3241,3214,3142,3124,2431,2413,2341,2314,2143,2134,1432,1423,1342,1324,1243,1234')
+    expect(numericExtractor('113')).toBe('311,131,113')
 })
 
