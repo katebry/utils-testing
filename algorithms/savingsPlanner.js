@@ -1,5 +1,11 @@
-function savingsPlanner(value) {
-    if (!value) return false;
+function savingsPlanner(startPriceOfOldCar, startPriceOfNewCar, savingPerMonth, percentLossByMonth) {
+    return [0, percentLossByMonth]
 }
 
-module.exports = savingsPlanner;
+function percentageDecrease(percentage, total) {
+    const totalToSubtract = (percentage / 100) * total
+    return total - totalToSubtract
+}
+
+module.exports = {savingsPlanner, percentageDecrease};
+
