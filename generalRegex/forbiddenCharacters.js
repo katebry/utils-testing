@@ -1,8 +1,7 @@
 function forbiddenCharactersValidator(value) {
-  if (!value) return true;
-  const forbiddenCharactersRegex = /[;<>\\/"'`|€]/g;
-  const result = forbiddenCharactersRegex.test(value);
-  return result;
+    if (!value) return true;
+    const forbiddenCharactersRegex = /[;<>\\/"'`|€]/g;
+    return forbiddenCharactersRegex.test(value);
 }
 
 module.exports = forbiddenCharactersValidator;
