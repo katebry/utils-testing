@@ -1,5 +1,5 @@
-function derivativeFinder() {
-    // code here...
+function derivativeFinder(value) {
+    if (!value) return false;
 }
 
-module.exports = derivativeFinder()
+module.exports = derivativeFinder;
