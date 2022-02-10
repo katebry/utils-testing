@@ -1,5 +1,5 @@
-import duplicateValueRemover from "./duplicateValueRemover";
+const duplicateValueRemover = require("./duplicateValueRemover");
 
-test('something', () => {
-    expect(duplicateValueRemover().toBe(false))
+test('If the two arrays passed into the function are empty, return false', () => {
+    expect(duplicateValueRemover('')).toBe(true);
 })
