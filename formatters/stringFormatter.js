@@ -18,7 +18,7 @@ function addSpacesToCamelCase(string) {
 function toKebabCase(string) {
     if (!string) return false;
     return string
-        // .replace(/([a-z])([A-Z])/g, "$1-$2")
+        .replace(/([a-z])([A-Z])/g, "$1-$2")
         .replace(/\s+/g, "-")
         .toLowerCase();
 }
