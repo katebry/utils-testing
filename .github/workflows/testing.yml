@@ -2,8 +2,8 @@ name: Jest Tests
 on: [ push ]
 jobs:
   Jest-Tests:
-    runs: ubuntu-latest
-    using: 'node16'
+    runs:
+      using: 'node16'
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
